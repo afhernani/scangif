@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfString xmlns:CtrlSearch="CtrlSearch">
+  <string>C:\Users\hernani\Storage\Videos</string>
+  <string>H:\Storage\Store\Videos</string>
+  <string>H:\Storage\Store\Videos\Adulto</string>
+  <string>H:\Storage\Videos\AdultoA</string>
+</ArrayOfString>
