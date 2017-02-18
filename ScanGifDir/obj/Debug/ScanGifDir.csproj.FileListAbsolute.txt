@@ -8,3 +8,13 @@ C:\Users\hernani\Documents\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug
 C:\Users\hernani\Documents\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug\ScanGifDir.pdb
 C:\Users\hernani\Documents\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug\ScanGifDir.Creditos.resources
 C:\Users\hernani\Documents\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug\ScanGifDir.CtrlSearch.resources
+D:\Usuarios\Hernani\Storage\Documentos\SharpDevelop Projects\ScanGifDir\ScanGifDir\bin\Debug\ScanGifDir.exe.config
+D:\Usuarios\Hernani\Storage\Documentos\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug\ScanGifDir.exe
+D:\Usuarios\Hernani\Storage\Documentos\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug\ScanGifDir.pdb
+D:\Usuarios\Hernani\Storage\Documentos\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug\ScanGifDir.csprojResolveAssemblyReference.cache
+D:\Usuarios\Hernani\Storage\Documentos\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug\ScanGifDir.Creditos.resources
+D:\Usuarios\Hernani\Storage\Documentos\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug\ScanGifDir.CtrlSearch.resources
+D:\Usuarios\Hernani\Storage\Documentos\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug\ScanGifDir.MainForm.resources
+D:\Usuarios\Hernani\Storage\Documentos\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug\ScanGifDir.csproj.GenerateResource.Cache
+D:\Usuarios\Hernani\Storage\Documentos\SharpDevelop Projects\ScanGifDir\ScanGifDir\bin\Debug\ScanGifDir.exe
+D:\Usuarios\Hernani\Storage\Documentos\SharpDevelop Projects\ScanGifDir\ScanGifDir\bin\Debug\ScanGifDir.pdb
