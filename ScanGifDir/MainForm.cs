@@ -69,11 +69,14 @@ namespace ScanGifDir
 				case (char)Keys.Z: // mayúsculas
 					toolStripStatusLabel1.Text = "Z -> " + PathCurrent;
 					//textBox3.Text += "\r\nTecla W en el formulario (KeyPress)";
+                    //clipboard pathcurrent fichero.
+                    if(!string.IsNullOrEmpty(PathCurrent))Clipboard.SetText(PathCurrent);
 					break;
 				case (char)(Keys.Z + 32): // minúsculas
 					toolStripStatusLabel1.Text = "z -> " + PathCurrent;
-					//textBox3.Text += "\r\nTecla W en el formulario (KeyPress)";
-					break;
+                    //textBox3.Text += "\r\nTecla W en el formulario (KeyPress)";
+                    if (!string.IsNullOrEmpty(PathCurrent)) Clipboard.SetText(PathCurrent);
+                    break;
 				case (char)Keys.Y:
 					toolStripStatusLabel1.Text = "Y";
 					break;
