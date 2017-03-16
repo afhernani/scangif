@@ -230,8 +230,10 @@ namespace ScanGifDir
 		
 		private void LoadFromSelectedPath(string folder)
 		{
-			string[] files = Directory.GetFiles(folder, "*.gif");
 			PathCurrent = folder;
+		    folder = Path.Combine(folder, "Thumbails");
+		    if (!Directory.Exists(folder)) return;
+			string[] files = Directory.GetFiles(folder, "*.gif");
 			toolStripStatusLabelDir.Text = " : Dir - " + Path.GetDirectoryName(PathCurrent);
 			//tenemos que clear el _FilesNames, o si no adicionamos directorios.
 			_FilesNames.AddRange(files);
@@ -255,6 +257,7 @@ namespace ScanGifDir
 		
 		private void KeyRignt()
 		{
+
 			if (_FilesNames != null && _FilesNames.Count != 0) {
 				if (Index < _FilesNames.Count - 1) {
 					Index++;
