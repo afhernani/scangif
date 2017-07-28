@@ -34,6 +34,9 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LibPanes">
+      <HintPath>..\..\ImageFrame\SpritePane\bin\Debug\LibPanes.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -104,12 +107,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="TutosFrance.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SpritePane\LibPanes.csproj">
-      <Project>{b323627e-42a1-4ba6-9a20-78a427fdc725}</Project>
-      <Name>LibPanes</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
