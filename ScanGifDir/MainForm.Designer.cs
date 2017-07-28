@@ -58,12 +58,12 @@ namespace ScanGifDir
 			this.toolStripBtnDespues = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripBtnHelp = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripBtnClear = new System.Windows.Forms.ToolStripButton();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolStripStatusLabelDir = new System.Windows.Forms.ToolStripStatusLabel();
-			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-			this.toolStripBtnClear = new System.Windows.Forms.ToolStripButton();
 			this.toolStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
@@ -94,7 +94,7 @@ namespace ScanGifDir
 			this.toolStripBtnOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripBtnOpen.Name = "toolStripBtnOpen";
 			this.toolStripBtnOpen.Size = new System.Drawing.Size(36, 36);
-			this.toolStripBtnOpen.Text = "toolStripButton1";
+			this.toolStripBtnOpen.Text = "Open directory";
 			this.toolStripBtnOpen.Click += new System.EventHandler(this.ToolStripBtnOpenClick);
 			// 
 			// toolStripSeparator1
@@ -109,7 +109,7 @@ namespace ScanGifDir
 			this.toolStripBtnAntes.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripBtnAntes.Name = "toolStripBtnAntes";
 			this.toolStripBtnAntes.Size = new System.Drawing.Size(36, 36);
-			this.toolStripBtnAntes.Text = "toolStripButton1";
+			this.toolStripBtnAntes.Text = "back to list directory";
 			this.toolStripBtnAntes.Click += new System.EventHandler(this.ToolStripBtnAntesClick);
 			// 
 			// toolStripBtnDespues
@@ -119,7 +119,7 @@ namespace ScanGifDir
 			this.toolStripBtnDespues.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripBtnDespues.Name = "toolStripBtnDespues";
 			this.toolStripBtnDespues.Size = new System.Drawing.Size(36, 36);
-			this.toolStripBtnDespues.Text = "toolStripButton2";
+			this.toolStripBtnDespues.Text = "Next to list directory";
 			this.toolStripBtnDespues.Click += new System.EventHandler(this.ToolStripBtnDespuesClick);
 			// 
 			// toolStripSeparator2
@@ -134,8 +134,23 @@ namespace ScanGifDir
 			this.toolStripBtnHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripBtnHelp.Name = "toolStripBtnHelp";
 			this.toolStripBtnHelp.Size = new System.Drawing.Size(36, 36);
-			this.toolStripBtnHelp.Text = "toolStripButton1";
+			this.toolStripBtnHelp.Text = "About me";
 			this.toolStripBtnHelp.Click += new System.EventHandler(this.ToolStripBtnHelpClick);
+			// 
+			// toolStripSeparator3
+			// 
+			this.toolStripSeparator3.Name = "toolStripSeparator3";
+			this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
+			// 
+			// toolStripBtnClear
+			// 
+			this.toolStripBtnClear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripBtnClear.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnClear.Image")));
+			this.toolStripBtnClear.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripBtnClear.Name = "toolStripBtnClear";
+			this.toolStripBtnClear.Size = new System.Drawing.Size(36, 36);
+			this.toolStripBtnClear.Text = "Clear List files";
+			this.toolStripBtnClear.Click += new System.EventHandler(this.ToolStripBtnClearClick);
 			// 
 			// pictureBox1
 			// 
@@ -146,7 +161,6 @@ namespace ScanGifDir
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 1;
 			this.pictureBox1.TabStop = false;
-			this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
 			// 
 			// statusStrip1
 			// 
@@ -174,21 +188,6 @@ namespace ScanGifDir
 			this.toolStripStatusLabelDir.Size = new System.Drawing.Size(46, 20);
 			this.toolStripStatusLabelDir.Text = ": Dir -";
 			// 
-			// toolStripSeparator3
-			// 
-			this.toolStripSeparator3.Name = "toolStripSeparator3";
-			this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
-			// 
-			// toolStripBtnClear
-			// 
-			this.toolStripBtnClear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripBtnClear.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnClear.Image")));
-			this.toolStripBtnClear.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripBtnClear.Name = "toolStripBtnClear";
-			this.toolStripBtnClear.Size = new System.Drawing.Size(36, 36);
-			this.toolStripBtnClear.Text = "Clear List files";
-			this.toolStripBtnClear.Click += new System.EventHandler(this.ToolStripBtnClearClick);
-			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,6 +204,7 @@ namespace ScanGifDir
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
 			this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainForm_KeyPress);
 			this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyUp);
+			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -214,5 +214,4 @@ namespace ScanGifDir
 			this.PerformLayout();
 
 		}
-	}
 }
