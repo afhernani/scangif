@@ -18,7 +18,6 @@ namespace ScanGifDir
 		private System.Windows.Forms.ToolStripButton toolStripBtnAntes;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 		private System.Windows.Forms.ToolStripButton toolStripBtnDespues;
-		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.StatusStrip statusStrip1;
 		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
 		private System.Windows.Forms.ToolStripButton toolStripBtnOpen;
@@ -27,6 +26,7 @@ namespace ScanGifDir
 		private System.Windows.Forms.ToolStripButton toolStripBtnHelp;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
 		private System.Windows.Forms.ToolStripButton toolStripBtnClear;
+		private LibPanes.SpritePane spritePane1;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -60,12 +60,11 @@ namespace ScanGifDir
 			this.toolStripBtnHelp = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripBtnClear = new System.Windows.Forms.ToolStripButton();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolStripStatusLabelDir = new System.Windows.Forms.ToolStripStatusLabel();
+			this.spritePane1 = new LibPanes.SpritePane();
 			this.toolStrip1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -152,16 +151,6 @@ namespace ScanGifDir
 			this.toolStripBtnClear.Text = "Clear List files";
 			this.toolStripBtnClear.Click += new System.EventHandler(this.ToolStripBtnClearClick);
 			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pictureBox1.Location = new System.Drawing.Point(0, 39);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(447, 360);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox1.TabIndex = 1;
-			this.pictureBox1.TabStop = false;
-			// 
 			// statusStrip1
 			// 
 			this.statusStrip1.ImageScalingSize = new System.Drawing.Size(36, 36);
@@ -188,30 +177,42 @@ namespace ScanGifDir
 			this.toolStripStatusLabelDir.Size = new System.Drawing.Size(46, 20);
 			this.toolStripStatusLabelDir.Text = ": Dir -";
 			// 
+			// spritePane1
+			// 
+			this.spritePane1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.spritePane1.Location = new System.Drawing.Point(0, 39);
+			this.spritePane1.Name = "spritePane1";
+			this.spritePane1.SetImageGif = null;
+			this.spritePane1.Size = new System.Drawing.Size(447, 335);
+			this.spritePane1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.spritePane1.TabIndex = 3;
+			this.spritePane1.Time = 800;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(447, 399);
+			this.Controls.Add(this.spritePane1);
 			this.Controls.Add(this.statusStrip1);
-			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.toolStrip1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.KeyPreview = true;
 			this.Name = "MainForm";
 			this.Text = "ScanGifDir";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
 			this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainForm_KeyPress);
 			this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyUp);
 			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.statusStrip1.ResumeLayout(false);
 			this.statusStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
 		}
+	}
 }

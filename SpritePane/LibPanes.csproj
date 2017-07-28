@@ -1,21 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
-    <ProjectGuid>{174919C1-BBF7-4373-B9BC-0E59A06B8D84}</ProjectGuid>
+    <ProjectGuid>{B323627E-42A1-4BA6-9A20-78A427FDC725}</ProjectGuid>
     <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>ScanGifDir</RootNamespace>
-    <AssemblyName>ScanGifDir</AssemblyName>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LibPanes</RootNamespace>
+    <AssemblyName>LibPanes</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <ApplicationIcon>TutosFrance.ico</ApplicationIcon>
     <NoWin32Manifest>False</NoWin32Manifest>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -53,63 +51,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Creditos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Creditos.Designer.cs">
-      <DependentUpon>Creditos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CtrlSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CtrlSearch.Designer.cs">
-      <DependentUpon>CtrlSearch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Init.Designer.cs">
-      <DependentUpon>Init.settings</DependentUpon>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Search.cs">
-      <SubType>Component</SubType>
+    <Compile Include="SpritePane.cs" />
+    <Compile Include="SpritePane.Designer.cs">
+      <DependentUpon>SpritePane.cs</DependentUpon>
     </Compile>
-    <Compile Include="Search.Designer.cs">
-      <DependentUpon>Search.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Util\AnimatedGifEncoder.cs" />
+    <Compile Include="Util\GifDecoder.cs" />
+    <Compile Include="Util\ImageGif.cs" />
+    <Compile Include="Util\LZWEncoder.cs" />
+    <Compile Include="Util\NeuQuant.cs" />
+    <Compile Include="Util\Utility.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="Init.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Init.Designer.cs</LastGenOutput>
-    </None>
+    <Folder Include="Util" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Creditos.resx">
-      <DependentUpon>Creditos.cs</DependentUpon>
+    <EmbeddedResource Include="SpritePane.resx">
+      <DependentUpon>SpritePane.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CtrlSearch.resx">
-      <DependentUpon>CtrlSearch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="TutosFrance.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SpritePane\LibPanes.csproj">
-      <Project>{b323627e-42a1-4ba6-9a20-78a427fdc725}</Project>
-      <Name>LibPanes</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

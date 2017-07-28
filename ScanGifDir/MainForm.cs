@@ -9,10 +9,9 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
+using LibPanes;
 
 namespace ScanGifDir
 {
@@ -149,13 +148,19 @@ namespace ScanGifDir
 			string filesearch = GetFileNameFromString(CurrentFile);
 			if (keyData == (Keys.Control | Keys.Alt | Keys.S)) {
 				Debug.WriteLine("<CTRL> + Alt + S Captured");
-				LanchCtrlSearch(filesearch);
-				return true;
+				LanchCtrlSearch(filesearch);	
 			}
 			if (keyData == (Keys.Control | Keys.V)) {
 				Debug.WriteLine("<CTRL> + V Captured");
-				SearchAndLunchVideo(filesearch);
-				return true;
+				SearchAndLunchVideo(filesearch);	
+			}
+			if (keyData == (Keys.Left)) {
+				Debug.WriteLine("Keys Left");
+				KeyLeft();	
+			}
+			if (keyData == (Keys.Right)) {
+				Debug.WriteLine("Keys right");
+				KeyRignt();		
 			}
 			return base.ProcessCmdKey(ref msg, keyData);
 		}
@@ -248,7 +253,9 @@ namespace ScanGifDir
 			if (File.Exists(file)) {
 				this.Text = "ScanGirDir: - " + Path.GetFileName(file);
 				toolStripStatusLabelDir.Text = " : Dir - " + Path.GetFileName(file);
-				pictureBox1.Image = (Image)Image.FromFile(file).Clone();
+				ImageGif igf = new ImageGif(file);
+				spritePane1.SetImageGif = igf;
+				//imagebox1.Image = (Image)Image.FromFile(file).Clone();
 				CurrentFile = file;
 			} else {
 				toolStripStatusLabelDir.Text = " : Dir - impossible to load file ";
@@ -318,6 +325,10 @@ namespace ScanGifDir
 			if (res == DialogResult.OK) {
 				_FilesNames.Clear();
 			}
+		}
+		void MainFormLoad(object sender, EventArgs e)
+		{
+	
 		}
 		
 	}
