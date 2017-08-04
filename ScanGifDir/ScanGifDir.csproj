@@ -34,6 +34,9 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ExplorerLib">
+      <HintPath>..\..\ShowGifs\ExplorerLib\bin\Debug\ExplorerLib.dll</HintPath>
+    </Reference>
     <Reference Include="LibPanes">
       <HintPath>..\..\ImageFrame\SpritePane\bin\Debug\LibPanes.dll</HintPath>
     </Reference>
@@ -56,6 +59,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Busca.cs" />
+    <Compile Include="Busca.Designer.cs">
+      <DependentUpon>Busca.cs</DependentUpon>
+    </Compile>
     <Compile Include="Creditos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +75,11 @@
     <Compile Include="CtrlSearch.Designer.cs">
       <DependentUpon>CtrlSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Explora.cs" />
+    <Compile Include="Explora.Designer.cs">
+      <DependentUpon>Explora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IForm.cs" />
     <Compile Include="Init.Designer.cs">
       <DependentUpon>Init.settings</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -95,11 +107,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Busca.resx">
+      <DependentUpon>Busca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Creditos.resx">
       <DependentUpon>Creditos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlSearch.resx">
       <DependentUpon>CtrlSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explora.resx">
+      <DependentUpon>Explora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

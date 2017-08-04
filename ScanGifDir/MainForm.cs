@@ -18,7 +18,7 @@ namespace ScanGifDir
 	/// <summary>
 	/// Description of MainForm.
 	/// </summary>
-	public partial class MainForm : Form
+	public partial class MainForm : Form, IForm
 	{
 		private static MainForm _instance = null;
 		
@@ -229,12 +229,14 @@ namespace ScanGifDir
 			FolderBrowserDialog folder = new FolderBrowserDialog();
 			DialogResult result = folder.ShowDialog();
 			if (result == DialogResult.OK) {
+				_FilesNames.Clear();
 				LoadFromSelectedPath(folder.SelectedPath);		
 			}
 		}
 		
 		private void LoadFromSelectedPath(string folder)
 		{
+			Index = 0;
 			PathCurrent = folder;
 		    folder = Path.Combine(folder, "Thumbails");
 		    if (!Directory.Exists(folder)) return;
@@ -253,8 +255,9 @@ namespace ScanGifDir
 			if (File.Exists(file)) {
 				this.Text = "ScanGirDir: - " + Path.GetFileName(file);
 				toolStripStatusLabelDir.Text = " : Dir - " + Path.GetFileName(file);
-				ImageGif igf = new ImageGif(file);
-				spritePane1.SetImageGif = igf;
+				//ImageGif igf = new ImageGif(file);
+				//spritePane1.SetImageGif = igf;
+				spritePane1.FilePath = file;
 				//imagebox1.Image = (Image)Image.FromFile(file).Clone();
 				CurrentFile = file;
 			} else {
@@ -324,6 +327,7 @@ namespace ScanGifDir
 				                   MessageBoxIcon.Exclamation);
 			if (res == DialogResult.OK) {
 				_FilesNames.Clear();
+				Index = 0;
 			}
 		}
 		void MainFormLoad(object sender, EventArgs e)
@@ -331,5 +335,77 @@ namespace ScanGifDir
 	
 		}
 		
+		#region IForm implementation
+		public void ChangeDirToExplore(string pathdir)
+		{
+			if (Directory.Exists(pathdir + @"\Thumbails"))
+            {
+				//limpia la pagina actual/seleccionada
+				//añade los nuevos elementos del directorio siguiente
+				_FilesNames.Clear();
+                LoadFromSelectedPath(pathdir);
+            }
+		}
+		public void AddFileFoundedSeached(FileInfo file)
+		{
+			Debug.WriteLine("addfilefoundedseached {"+file.FullName+"}");
+			_FilesNames.Add(file.FullName);
+		}
+		#endregion
+		void ToolStripBtnMovieClick(object sender, EventArgs e)
+		{
+			if (String.IsNullOrEmpty(CurrentFile)) return;
+            string movie = CombineAddressFileMovie(CurrentFile);
+            if (File.Exists(movie)) Process.Start(movie);
+		}
+		private static string CombineAddressFileMovie(string currentfilepath)
+        {
+            string name = null;
+            string cad = null;
+            if (!String.IsNullOrEmpty(currentfilepath))
+            {
+                name = GetFileNameFromString(currentfilepath);
+                cad = Path.Combine(PathNivel(Path.GetDirectoryName(currentfilepath), 1), name);
+            }
+            Debug.WriteLine("direccion fichero: "+cad);
+            return cad;
+        }
+		/// <summary>
+        /// Utilidad para retroceder
+        /// devuelve el nivel n veces inferior en el path
+        /// </summary>
+        /// <param name="root"></param>
+        /// <param name="n"></param>
+        /// <returns></returns>
+	    private static string PathNivel(string root, int n)
+        {
+            string[] name = root.Split(Convert.ToChar(@"\"));
+            string path = name[0];
+            for (int i = 1; i < name.Length - n; i++)
+            {
+                path += @"\" + name[i];
+            }
+            return path;
+        }
+		void ToolStripBtnGifClick(object sender, EventArgs e)
+		{
+			//Image sprite = Image.FromFile(CurrentFilePath);
+            //FGif fgif = new FGif();
+            //Size size = new Size(sprite.Width, sprite.Height);
+            //fgif.Size = size;
+            //fgif.ImageToView = sprite;
+            //fgif.Tag = CurrentFilePath;// sprite.Tag;
+            //fgif.Show();
+		}
+		void ToolStripBtnExploreClick(object sender, EventArgs e)
+		{
+			Explora explo = Explora.GetInstancia();
+            explo.Show(this);
+		}
+		void ToolStripBtnSearchClick(object sender, EventArgs e)
+		{
+			Busca fr = new Busca();
+            fr.Show(this);
+		}
 	}
 }

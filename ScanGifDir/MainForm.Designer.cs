@@ -27,6 +27,12 @@ namespace ScanGifDir
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
 		private System.Windows.Forms.ToolStripButton toolStripBtnClear;
 		private LibPanes.SpritePane spritePane1;
+		private System.Windows.Forms.ToolStripButton toolStripBtnExplore;
+		private System.Windows.Forms.ToolStripButton toolStripBtnSearch;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+		private System.Windows.Forms.ToolStripButton toolStripBtnMovie;
+		private System.Windows.Forms.ToolStripButton toolStripBtnGif;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -59,7 +65,13 @@ namespace ScanGifDir
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripBtnHelp = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripBtnExplore = new System.Windows.Forms.ToolStripButton();
+			this.toolStripBtnSearch = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripBtnMovie = new System.Windows.Forms.ToolStripButton();
+			this.toolStripBtnGif = new System.Windows.Forms.ToolStripButton();
 			this.toolStripBtnClear = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolStripStatusLabelDir = new System.Windows.Forms.ToolStripStatusLabel();
@@ -79,7 +91,13 @@ namespace ScanGifDir
 			this.toolStripSeparator2,
 			this.toolStripBtnHelp,
 			this.toolStripSeparator3,
-			this.toolStripBtnClear});
+			this.toolStripBtnExplore,
+			this.toolStripBtnSearch,
+			this.toolStripSeparator5,
+			this.toolStripBtnMovie,
+			this.toolStripBtnGif,
+			this.toolStripBtnClear,
+			this.toolStripSeparator4});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.Size = new System.Drawing.Size(447, 39);
@@ -141,6 +159,51 @@ namespace ScanGifDir
 			this.toolStripSeparator3.Name = "toolStripSeparator3";
 			this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
 			// 
+			// toolStripBtnExplore
+			// 
+			this.toolStripBtnExplore.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripBtnExplore.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnExplore.Image")));
+			this.toolStripBtnExplore.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripBtnExplore.Name = "toolStripBtnExplore";
+			this.toolStripBtnExplore.Size = new System.Drawing.Size(36, 36);
+			this.toolStripBtnExplore.Text = "tool Explore";
+			this.toolStripBtnExplore.Click += new System.EventHandler(this.ToolStripBtnExploreClick);
+			// 
+			// toolStripBtnSearch
+			// 
+			this.toolStripBtnSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripBtnSearch.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnSearch.Image")));
+			this.toolStripBtnSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripBtnSearch.Name = "toolStripBtnSearch";
+			this.toolStripBtnSearch.Size = new System.Drawing.Size(36, 36);
+			this.toolStripBtnSearch.Text = "tool search";
+			this.toolStripBtnSearch.Click += new System.EventHandler(this.ToolStripBtnSearchClick);
+			// 
+			// toolStripSeparator5
+			// 
+			this.toolStripSeparator5.Name = "toolStripSeparator5";
+			this.toolStripSeparator5.Size = new System.Drawing.Size(6, 39);
+			// 
+			// toolStripBtnMovie
+			// 
+			this.toolStripBtnMovie.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripBtnMovie.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnMovie.Image")));
+			this.toolStripBtnMovie.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripBtnMovie.Name = "toolStripBtnMovie";
+			this.toolStripBtnMovie.Size = new System.Drawing.Size(36, 36);
+			this.toolStripBtnMovie.Text = "show movie";
+			this.toolStripBtnMovie.Click += new System.EventHandler(this.ToolStripBtnMovieClick);
+			// 
+			// toolStripBtnGif
+			// 
+			this.toolStripBtnGif.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripBtnGif.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnGif.Image")));
+			this.toolStripBtnGif.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripBtnGif.Name = "toolStripBtnGif";
+			this.toolStripBtnGif.Size = new System.Drawing.Size(36, 36);
+			this.toolStripBtnGif.Text = "show gif asociado";
+			this.toolStripBtnGif.Click += new System.EventHandler(this.ToolStripBtnGifClick);
+			// 
 			// toolStripBtnClear
 			// 
 			this.toolStripBtnClear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -150,6 +213,11 @@ namespace ScanGifDir
 			this.toolStripBtnClear.Size = new System.Drawing.Size(36, 36);
 			this.toolStripBtnClear.Text = "Clear List files";
 			this.toolStripBtnClear.Click += new System.EventHandler(this.ToolStripBtnClearClick);
+			// 
+			// toolStripSeparator4
+			// 
+			this.toolStripSeparator4.Name = "toolStripSeparator4";
+			this.toolStripSeparator4.Size = new System.Drawing.Size(6, 39);
 			// 
 			// statusStrip1
 			// 
@@ -179,7 +247,9 @@ namespace ScanGifDir
 			// 
 			// spritePane1
 			// 
+			this.spritePane1.CurrentFrame = 0;
 			this.spritePane1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.spritePane1.FilePath = "";
 			this.spritePane1.Location = new System.Drawing.Point(0, 39);
 			this.spritePane1.Name = "spritePane1";
 			this.spritePane1.SetImageGif = null;

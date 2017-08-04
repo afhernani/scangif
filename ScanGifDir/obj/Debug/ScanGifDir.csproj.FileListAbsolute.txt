@@ -20,3 +20,7 @@ D:\Usuarios\Hernani\Storage\Documentos\SharpDevelop Projects\ScanGifDir\ScanGifD
 C:\Users\hernani\Documents\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug\ScanGifDir.csprojResolveAssemblyReference.cache
 C:\Users\hernani\Documents\SharpDevelop Projects\ScanGifDir\ScanGifDir\bin\Debug\LibPanes.dll
 C:\Users\hernani\Documents\SharpDevelop Projects\ScanGifDir\ScanGifDir\bin\Debug\LibPanes.pdb
+C:\Users\hernani\Documents\SharpDevelop Projects\ScanGifDir\ScanGifDir\bin\Debug\ExplorerLib.dll
+C:\Users\hernani\Documents\SharpDevelop Projects\ScanGifDir\ScanGifDir\bin\Debug\ExplorerLib.pdb
+C:\Users\hernani\Documents\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug\ScanGifDir.Busca.resources
+C:\Users\hernani\Documents\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug\ScanGifDir.Explora.resources

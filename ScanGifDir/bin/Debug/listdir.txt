@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfString xmlns:CtrlSearch="CtrlSearch">
-  <string>H:\Users\Xvid\A</string>
-  <string>M:\Storage\Videos\AdultoA</string>
-  <string>G:\Users\Xvid\A</string>
+  <string>H:\Users\Xvid\V</string>
 </ArrayOfString>
