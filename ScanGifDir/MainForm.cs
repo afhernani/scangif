@@ -407,5 +407,12 @@ namespace ScanGifDir
 			Busca fr = new Busca();
             fr.Show(this);
 		}
+		void ToolStripBtnViewerClick(object sender, EventArgs e)
+		{
+			Viewer vis = new Viewer();
+			if(_FilesNames!=null && _FilesNames.Count > 0)
+				vis.Listaficheros = _FilesNames;
+			vis.Show();
+		}
 	}
 }
