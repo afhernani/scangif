@@ -65,11 +65,12 @@ namespace ScanGifDir
 				//flowLayoutPanel.Controls.Clear();
 				while (ContadorActual < LimtConatrols) 
 				{
-					SpritePane pn = new SpritePane(){
+					ImagenBox pn = new ImagenBox(){
 						Width=220,
-						Height=110
+						Height=110,
 					};
-					pn.FilePath = _listaficheros[Index];
+					pn.FromFile(_listaficheros[Index]);
+					pn.CurrentFrame = 10;
 					if (Index < _listaficheros.Count-1)
 						Index++;
 					else
@@ -80,7 +81,7 @@ namespace ScanGifDir
 				ContadorActual = 0;
 			}
 		}
-		void AddSprite(SpritePane pn)
+		void AddSprite(ImagenBox pn)
 		{
 			if(flowLayoutPanel.Controls.Count>LimtConatrols-1)
 				flowLayoutPanel.Controls.RemoveAt(0);

@@ -26,7 +26,6 @@ namespace ScanGifDir
 		private System.Windows.Forms.ToolStripButton toolStripBtnHelp;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
 		private System.Windows.Forms.ToolStripButton toolStripBtnClear;
-		private LibPanes.SpritePane spritePane1;
 		private System.Windows.Forms.ToolStripButton toolStripBtnExplore;
 		private System.Windows.Forms.ToolStripButton toolStripBtnSearch;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
@@ -34,6 +33,7 @@ namespace ScanGifDir
 		private System.Windows.Forms.ToolStripButton toolStripBtnGif;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
 		private System.Windows.Forms.ToolStripButton toolStripBtnViewer;
+		private LibPanes.SpritePane spritePane1;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -68,6 +68,7 @@ namespace ScanGifDir
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripBtnExplore = new System.Windows.Forms.ToolStripButton();
 			this.toolStripBtnSearch = new System.Windows.Forms.ToolStripButton();
+			this.toolStripBtnViewer = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripBtnMovie = new System.Windows.Forms.ToolStripButton();
 			this.toolStripBtnGif = new System.Windows.Forms.ToolStripButton();
@@ -77,7 +78,6 @@ namespace ScanGifDir
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolStripStatusLabelDir = new System.Windows.Forms.ToolStripStatusLabel();
 			this.spritePane1 = new LibPanes.SpritePane();
-			this.toolStripBtnViewer = new System.Windows.Forms.ToolStripButton();
 			this.toolStrip1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
 			this.SuspendLayout();
@@ -182,6 +182,16 @@ namespace ScanGifDir
 			this.toolStripBtnSearch.Text = "tool search";
 			this.toolStripBtnSearch.Click += new System.EventHandler(this.ToolStripBtnSearchClick);
 			// 
+			// toolStripBtnViewer
+			// 
+			this.toolStripBtnViewer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripBtnViewer.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnViewer.Image")));
+			this.toolStripBtnViewer.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripBtnViewer.Name = "toolStripBtnViewer";
+			this.toolStripBtnViewer.Size = new System.Drawing.Size(36, 36);
+			this.toolStripBtnViewer.Text = "toolStripButton1";
+			this.toolStripBtnViewer.Click += new System.EventHandler(this.ToolStripBtnViewerClick);
+			// 
 			// toolStripSeparator5
 			// 
 			this.toolStripSeparator5.Name = "toolStripSeparator5";
@@ -250,9 +260,9 @@ namespace ScanGifDir
 			// 
 			// spritePane1
 			// 
-			this.spritePane1.CurrentFrame = 0;
+			this.spritePane1.CurrentFrame = -1;
 			this.spritePane1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.spritePane1.FilePath = "";
+			this.spritePane1.FilePath = "Not";
 			this.spritePane1.Location = new System.Drawing.Point(0, 39);
 			this.spritePane1.Name = "spritePane1";
 			this.spritePane1.SetImageGif = null;
@@ -260,16 +270,6 @@ namespace ScanGifDir
 			this.spritePane1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.spritePane1.TabIndex = 3;
 			this.spritePane1.Time = 800;
-			// 
-			// toolStripBtnViewer
-			// 
-			this.toolStripBtnViewer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripBtnViewer.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnViewer.Image")));
-			this.toolStripBtnViewer.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripBtnViewer.Name = "toolStripBtnViewer";
-			this.toolStripBtnViewer.Size = new System.Drawing.Size(36, 36);
-			this.toolStripBtnViewer.Text = "toolStripButton1";
-			this.toolStripBtnViewer.Click += new System.EventHandler(this.ToolStripBtnViewerClick);
 			// 
 			// MainForm
 			// 
