@@ -390,12 +390,14 @@ namespace ScanGifDir
 		void ToolStripBtnGifClick(object sender, EventArgs e)
 		{
 			//Image sprite = Image.FromFile(CurrentFilePath);
-            //FGif fgif = new FGif();
+			showGif fgif = new showGif();
+			if(!String.IsNullOrEmpty(CurrentFile))
+				fgif.PathRoot = CurrentFile;
             //Size size = new Size(sprite.Width, sprite.Height);
             //fgif.Size = size;
             //fgif.ImageToView = sprite;
             //fgif.Tag = CurrentFilePath;// sprite.Tag;
-            //fgif.Show();
+            fgif.Show();
 		}
 		void ToolStripBtnExploreClick(object sender, EventArgs e)
 		{

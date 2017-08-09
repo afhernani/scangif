@@ -25,3 +25,4 @@ C:\Users\hernani\Documents\SharpDevelop Projects\ScanGifDir\ScanGifDir\bin\Debug
 C:\Users\hernani\Documents\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug\ScanGifDir.Busca.resources
 C:\Users\hernani\Documents\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug\ScanGifDir.Explora.resources
 C:\Users\hernani\Documents\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug\ScanGifDir.Viewer.resources
+C:\Users\hernani\Documents\SharpDevelop Projects\ScanGifDir\ScanGifDir\obj\Debug\ScanGifDir.showGif.resources

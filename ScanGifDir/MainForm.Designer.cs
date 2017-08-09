@@ -103,7 +103,7 @@ namespace ScanGifDir
 			this.toolStripSeparator4});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.Size = new System.Drawing.Size(447, 39);
+			this.toolStrip1.Size = new System.Drawing.Size(524, 39);
 			this.toolStrip1.TabIndex = 0;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
@@ -240,7 +240,7 @@ namespace ScanGifDir
 			this.toolStripStatusLabelDir});
 			this.statusStrip1.Location = new System.Drawing.Point(0, 374);
 			this.statusStrip1.Name = "statusStrip1";
-			this.statusStrip1.Size = new System.Drawing.Size(447, 25);
+			this.statusStrip1.Size = new System.Drawing.Size(524, 25);
 			this.statusStrip1.TabIndex = 2;
 			this.statusStrip1.Text = "statusStrip1";
 			// 
@@ -266,7 +266,7 @@ namespace ScanGifDir
 			this.spritePane1.Location = new System.Drawing.Point(0, 39);
 			this.spritePane1.Name = "spritePane1";
 			this.spritePane1.SetImageGif = null;
-			this.spritePane1.Size = new System.Drawing.Size(447, 335);
+			this.spritePane1.Size = new System.Drawing.Size(524, 335);
 			this.spritePane1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.spritePane1.TabIndex = 3;
 			this.spritePane1.Time = 800;
@@ -275,7 +275,7 @@ namespace ScanGifDir
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(447, 399);
+			this.ClientSize = new System.Drawing.Size(524, 399);
 			this.Controls.Add(this.spritePane1);
 			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.toolStrip1);
