@@ -255,12 +255,10 @@ namespace ScanGifDir
 			if (File.Exists(file)) {
 				this.Text = "ScanGirDir: - " + Path.GetFileName(file);
 				toolStripStatusLabelDir.Text = " : Dir - " + Path.GetFileName(file);
-				//ImageGif igf = new ImageGif(file);
-				//spritePane1.SetImageGif = igf;
-				spritePane1.FilePath = file;
-                spritePane1.CurrentFrame = 6;
-				//imagebox1.Image = (Image)Image.FromFile(file).Clone();
-				CurrentFile = file;
+                imagenBox1.Reset();
+                imagenBox1.FromFile(file);
+                imagenBox1.SetCurrentFrame = (int)(imagenBox1.Count / 2);
+                CurrentFile = file;
 			} else {
 				toolStripStatusLabelDir.Text = " : Dir - impossible to load file ";
 			}
