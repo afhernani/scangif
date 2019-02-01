@@ -258,6 +258,7 @@ namespace ScanGifDir
 				//ImageGif igf = new ImageGif(file);
 				//spritePane1.SetImageGif = igf;
 				spritePane1.FilePath = file;
+                spritePane1.CurrentFrame = 6;
 				//imagebox1.Image = (Image)Image.FromFile(file).Clone();
 				CurrentFile = file;
 			} else {

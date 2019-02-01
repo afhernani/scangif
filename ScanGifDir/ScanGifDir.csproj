@@ -37,8 +37,9 @@
     <Reference Include="ExplorerLib">
       <HintPath>..\..\ShowGifs\ExplorerLib\bin\Debug\ExplorerLib.dll</HintPath>
     </Reference>
-    <Reference Include="LibPanes">
-      <HintPath>..\..\ImageFrame\SpritePane\bin\Debug\LibPanes.dll</HintPath>
+    <Reference Include="LibPanes, Version=1.0.6430.24967, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Visual Studio 2017\Projects\LibPanes\LibPanes\bin\Debug\LibPanes.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>

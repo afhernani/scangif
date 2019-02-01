@@ -70,7 +70,7 @@ namespace ScanGifDir
 						Height=110,
 					};
 					pn.FromFile(_listaficheros[Index]);
-					pn.CurrentFrame = 10;
+                    pn.SetCurrentFrame = (int)Math.Floor((decimal)(pn.Count / 2));
 					if (Index < _listaficheros.Count-1)
 						Index++;
 					else
